@@ -1,0 +1,208 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{BA2F86A5-4B1E-4741-B4D7-E1265D361B91}</ProjectGuid>
+			<MainSource>C2WClientD2010.dpk</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>d:\program files\embarcadero\rad studio\7.0\Bin\C2WClientD2010.bpl</DCC_DependencyCheckOutputName>
+			<DCC_UnitSearchPath>$(DELPHI)\Lib\Debug;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_WriteableConstants>true</DCC_WriteableConstants>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Description>Corp2World Client Library</DCC_Description>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;WinTypes=Windows;WinProcs=Windows;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_BplOutput>$(DELPHI)\Bin</DCC_BplOutput>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_Platform>x86</DCC_Platform>
+			<GenPackage>true</GenPackage>
+			<DCC_DcpOutput>$(DELPHI)\Lib</DCC_DcpOutput>
+			<DCC_S>false</DCC_S>
+			<GenDll>true</GenDll>
+			<DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
+			<DCC_N>true</DCC_N>
+			<DCC_E>false</DCC_E>
+			<DCC_DcuOutput>$(DELPHI)\Lib\Debug\</DCC_DcuOutput>
+			<DCC_K>false</DCC_K>
+			<DCC_F>false</DCC_F>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="C2WClientD2010.dpk">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\Core\C2WRegistration.dcr"/>
+			<DCCReference Include="vcl.dcp"/>
+			<DCCReference Include="..\Indy\CWHTTP.pas"/>
+			<DCCReference Include="..\Indy\CWIOHandlerSocket.pas"/>
+			<DCCReference Include="..\Indy\CWSSLOpenSSL.pas"/>
+			<DCCReference Include="..\Indy\CWException.pas"/>
+			<DCCReference Include="..\Indy\CWExceptionCore.pas"/>
+			<DCCReference Include="..\Indy\CWStack.pas"/>
+			<DCCReference Include="..\Indy\CWStackConsts.pas"/>
+			<DCCReference Include="..\Indy\CWWship6.pas"/>
+			<DCCReference Include="..\Indy\CWGlobal.pas"/>
+			<DCCReference Include="..\Indy\CWResourceStrings.pas"/>
+			<DCCReference Include="..\Indy\CWResourceStringsTextEncoding.pas"/>
+			<DCCReference Include="..\Indy\CWStream.pas"/>
+			<DCCReference Include="..\Indy\CWStreamVCL.pas"/>
+			<DCCReference Include="..\Indy\CWWinsock2.pas"/>
+			<DCCReference Include="..\Indy\CWStackWindows.pas"/>
+			<DCCReference Include="..\Indy\CWStackBSDBase.pas"/>
+			<DCCReference Include="..\Indy\CWIDN.pas"/>
+			<DCCReference Include="..\Indy\CWAssignedNumbers.pas"/>
+			<DCCReference Include="..\Indy\CWHeaderList.pas"/>
+			<DCCReference Include="..\Indy\CWGlobalProtocols.pas"/>
+			<DCCReference Include="..\Indy\CWCharsets.pas"/>
+			<DCCReference Include="..\Indy\CWBaseComponent.pas"/>
+			<DCCReference Include="..\Indy\CWIPAddress.pas"/>
+			<DCCReference Include="..\Indy\CWResourceStringsCore.pas"/>
+			<DCCReference Include="..\Indy\CWResourceStringsProtocols.pas"/>
+			<DCCReference Include="..\Indy\CWHTTPHeaderInfo.pas"/>
+			<DCCReference Include="..\Indy\CWAuthentication.pas"/>
+			<DCCReference Include="..\Indy\CWCoderMIME.pas"/>
+			<DCCReference Include="..\Indy\CWCoder3to4.pas"/>
+			<DCCReference Include="..\Indy\CWCoder.pas"/>
+			<DCCReference Include="..\Indy\CWReplyRFC.pas"/>
+			<DCCReference Include="..\Indy\CWReply.pas"/>
+			<DCCReference Include="..\Indy\CWSSL.pas"/>
+			<DCCReference Include="..\Indy\CWZLibCompressorBase.pas"/>
+			<DCCReference Include="..\Indy\CWTCPClient.pas"/>
+			<DCCReference Include="..\Indy\CWURI.pas"/>
+			<DCCReference Include="..\Indy\CWCookie.pas"/>
+			<DCCReference Include="..\Indy\CWCookieManager.pas"/>
+			<DCCReference Include="..\Indy\CWAuthenticationManager.pas"/>
+			<DCCReference Include="..\Indy\CWMultipartFormData.pas"/>
+			<DCCReference Include="..\Indy\CWUriUtils.pas"/>
+			<DCCReference Include="..\Indy\CWIOHandler.pas"/>
+			<DCCReference Include="..\Indy\CWAntiFreeze.pas"/>
+			<DCCReference Include="..\Indy\CWAntiFreezeBase.pas"/>
+			<DCCReference Include="..\Indy\CWBuffer.pas"/>
+			<DCCReference Include="..\Indy\CWComponent.pas"/>
+			<DCCReference Include="..\Indy\CWIntercept.pas"/>
+			<DCCReference Include="..\Indy\CWCustomTransparentProxy.pas"/>
+			<DCCReference Include="..\Indy\CWSocketHandle.pas"/>
+			<DCCReference Include="..\Indy\CWSocks.pas"/>
+			<DCCReference Include="..\Indy\CWTCPConnection.pas"/>
+			<DCCReference Include="..\Indy\CWIOHandlerStack.pas"/>
+			<DCCReference Include="..\Indy\CWScheduler.pas"/>
+			<DCCReference Include="..\Indy\CWYarn.pas"/>
+			<DCCReference Include="..\Indy\CWServerIOHandler.pas"/>
+			<DCCReference Include="..\Indy\CWThread.pas"/>
+			<DCCReference Include="..\Indy\CWThreadSafe.pas"/>
+			<DCCReference Include="..\Indy\CWTask.pas"/>
+			<DCCReference Include="..\Indy\CWResourceStringsUriUtils.pas"/>
+			<DCCReference Include="..\Indy\CWCoderHeader.pas"/>
+			<DCCReference Include="..\Indy\CWEMailAddress.pas"/>
+			<DCCReference Include="..\Indy\CWHeaderCoderBase.pas"/>
+			<DCCReference Include="..\Indy\CWAllHeaderCoders.pas"/>
+			<DCCReference Include="..\Indy\CWHeaderCoderPlain.pas"/>
+			<DCCReference Include="..\Indy\CWHeaderCoder2022JP.pas"/>
+			<DCCReference Include="..\Indy\CWHeaderCoderIndy.pas"/>
+			<DCCReference Include="..\Indy\CWCoderQuotedPrintable.pas"/>
+			<DCCReference Include="..\Indy\CWAllAuthentications.pas"/>
+			<DCCReference Include="..\Indy\CWAuthenticationNTLM.pas"/>
+			<DCCReference Include="..\Indy\CWResourceStringsOpenSSL.pas"/>
+			<DCCReference Include="..\Indy\CWSSLOpenSSLHeaders.pas"/>
+			<DCCReference Include="..\Indy\CWCTypes.pas"/>
+			<DCCReference Include="..\Indy\CWFIPS.pas"/>
+			<DCCReference Include="..\Indy\CWTCPServer.pas"/>
+			<DCCReference Include="..\Indy\CWCustomTCPServer.pas"/>
+			<DCCReference Include="..\Indy\CWContext.pas"/>
+			<DCCReference Include="..\Indy\CWSchedulerOfThread.pas"/>
+			<DCCReference Include="..\Indy\CWServerIOHandlerStack.pas"/>
+			<DCCReference Include="..\Indy\CWServerIOHandlerSocket.pas"/>
+			<DCCReference Include="..\Indy\CWGlobalCore.pas"/>
+			<DCCReference Include="..\Indy\CWSchedulerOfThreadDefault.pas"/>
+			<DCCReference Include="..\Indy\CWNTLM.pas"/>
+			<DCCReference Include="..\Indy\CWStruct.pas"/>
+			<DCCReference Include="..\Indy\CWHash.pas"/>
+			<DCCReference Include="..\Indy\CWHashMessageDigest.pas"/>
+			<DCCReference Include="..\Indy\CWAuthenticationSSPI.pas"/>
+			<DCCReference Include="..\Indy\CWSSPI.pas"/>
+			<DCCReference Include="..\Indy\CWResourceStringsSSPI.pas"/>
+			<DCCReference Include="..\Indy\CWAuthenticationDigest.pas"/>
+			<DCCReference Include="..\SO\SuperObject.pas"/>
+			<DCCReference Include="..\Core\C2WDataModels.pas"/>
+			<DCCReference Include="..\Core\C2WHttpService.pas"/>
+			<DCCReference Include="..\Core\C2WRegistration.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>Package</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">C2WClientD2010.dpk</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">1</VersionInfo>
+						<VersionInfo Name="Release">1</VersionInfo>
+						<VersionInfo Name="Build">44</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">UASoftService</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.1.1.44</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
